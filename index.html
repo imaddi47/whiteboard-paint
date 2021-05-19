@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Whiteboard Doodle</title>
+</head>
+<body>
+    <div id="main">
+        <div id="whiteboard-controls" class="active">
+            <span id="controls-toggler" class="active"></span>
+            <div class="control-group">
+                <div class="control-group-head">
+                    <span>Pointer Size</span>
+                </div>
+                <div class="control-group-body">
+                    <div class="control">
+                        <ul id="doodle-size" class="whiteboard-option-fold control-menu" data-open="false">
+                            <i class="fa fa-circle" aria-hidden="true"></i>
+                            <li class="">
+                                <input id="control-size" type="range" min="1" max="100">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="control-group-head">
+                    <span>Doodle Pen</span>
+                </div>
+                <div class="control-group-body">
+                    <div class="control">
+                        <button class="control-btn doodle-pen whiteboard-option color-black" data-pen="#000000">
+                            <i class="fa fa-pencil" area-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="control">
+                        <button class="control-btn doodle-pen whiteboard-option color-blue" data-pen="#0000ff">
+                            <i class="fa fa-pencil" area-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="control">
+                        <button class="control-btn doodle-pen whiteboard-option color-red" data-pen="#ff0000">
+                            <i class="fa fa-pencil" area-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="control">
+                        <label for="control-doodle-select" class="control-btn whiteboard-option color-mix" data-pen="#ff0000">
+                            <i class="fa fa-eyedropper" aria-hidden="true"></i>
+                        </label>
+                        <input type="color" style="display: none;" id="control-doodle-select">
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="control-group-head">
+                    <span>Eraser</span>
+                </div>
+                <div class="control-group-body">
+                    <div class="control">
+                        <button id="doodle-eraser" class="control-btn whiteboard-option color-white">
+                            <i class="fa fa-eraser" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="control-group-head">
+                    <span>Undo/Redo</span>
+                </div>
+                <div class="control-group-body">
+                    <div class="control">
+                        <button id="doodle-undo" class="whiteboard-option">
+                            <i class="fa fa-undo" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="control">
+                        <button id="doodle-redo" class="whiteboard-option">
+                            <i class="fa fa-repeat" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="control-group-head">
+                    <span>Save</span>
+                </div>
+                <div class="control-group-body">
+                    <div class="control">
+                        <button id="doodle-save" class="control-btn whiteboard-option color-blue">
+                            <i class="fa fa-floppy-o"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="control-group-head">
+                    <span>Reset</span>
+                </div>
+                <div class="control-group-body">
+                    <div class="control">
+                        <button id="doodle-reset" class="control-btn whiteboard-option color-red">
+                            <i class="fa fa-refresh"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <canvas id="whiteboard"></canvas>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="controls.js"></script>
+</body>
+</html>
